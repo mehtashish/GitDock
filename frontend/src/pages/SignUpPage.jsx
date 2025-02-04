@@ -1,9 +1,12 @@
-import React from 'react'
+import AuthForm from "../components/AuthForm";
 
 const SignUpPage = () => {
-    return (
-        <div>SignUpPage</div>
-    )
-}
+  const handleSignUp = (e, formData) => {
+    e.preventDefault();
+    console.log("Signup Data:", formData);
+  };
 
-export default SignUpPage
+  return <AuthForm type="signup" onSubmit={handleSignUp} />;
+};
+
+export default SignUpPage;

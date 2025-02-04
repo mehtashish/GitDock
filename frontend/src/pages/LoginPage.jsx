@@ -1,9 +1,12 @@
-import React from 'react'
+import AuthForm from "../components/AuthForm";
 
 const LoginPage = () => {
-    return (
-        <div>LoginPage</div>
-    )
-}
+  const handleLogin = (e, formData) => {
+    e.preventDefault();
+    console.log("Login Data:", formData);
+  };
 
-export default LoginPage
+  return <AuthForm type="login" onSubmit={handleLogin} />;
+};
+
+export default LoginPage;
